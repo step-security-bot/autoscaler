@@ -34,3 +34,48 @@ updates:
     interval: daily
   target-branch: "addon-resizer-release-1.8"
   open-pull-requests-limit: 3
+
+- package-ecosystem: docker
+  directory: /addon-resizer
+  schedule:
+    interval: daily
+
+- package-ecosystem: docker
+  directory: /addon-resizer/vendor/golang.org/x/net/http2
+  schedule:
+    interval: daily
+
+- package-ecosystem: docker
+  directory: /balancer
+  schedule:
+    interval: daily
+
+- package-ecosystem: gomod
+  directory: /balancer
+  schedule:
+    interval: daily
+
+- package-ecosystem: docker
+  directory: /builder
+  schedule:
+    interval: daily
+
+- package-ecosystem: gomod
+  directory: /cluster-autoscaler/apis
+  schedule:
+    interval: daily
+
+- package-ecosystem: docker
+  directory: /cluster-autoscaler/cloudprovider/bizflycloud/gobizfly
+  schedule:
+    interval: daily
+
+- package-ecosystem: gomod
+  directory: /cluster-autoscaler
+  schedule:
+    interval: daily
+
+- package-ecosystem: gomod
+  directory: /vertical-pod-autoscaler/e2e
+  schedule:
+    interval: daily
